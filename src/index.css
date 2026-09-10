@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom Scrollbar for Modern Light UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6C63FF;
+}
+
+/* Modern Card & Panel Elevation */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.glass-card {
+  background: #FFFFFF;
+  backdrop-filter: blur(8px);
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: #6C63FF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(108, 99, 255, 0.15);
+}
+
+.glass-drawer {
+  background: #FFFFFF;
+  border-left: 1px solid #E2E8F0;
+}
+
+/* Glow Utilities */
+.glow-accent {
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.35);
+}
+
+.glow-success {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.35);
+}
+
+/* Thermal Printer Simulated Paper Styling */
+.thermal-paper {
+  background-color: #FAFAFA;
+  color: #111;
+  font-family: 'JetBrains Mono', monospace;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Keyframe animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
